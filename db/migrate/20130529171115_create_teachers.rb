@@ -1,7 +1,7 @@
 require_relative '../config'
 
 class CreateTeachers < ActiveRecord::Migration
-  def up
+  def change
     create_table :teachers do |t|
       t.string :first_name
       t.string :last_name
@@ -9,10 +9,10 @@ class CreateTeachers < ActiveRecord::Migration
       t.string :address
       t.string :phone
     end
-  end
 
-  def down
-    drop_table :teachers
+    change_table :students do |t|
+      t.references :teacher
+    end 
   end
 
 end

@@ -8,9 +8,9 @@ class CreateStudents < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :gender
-      t.date   :birthday, :null => false
-      t.string :email, :null => false, :unique => true
-      t.string :phone, :null => false
+      t.date   :birthday
+      t.string :email
+      t.string :phone
     end
 
     # HINT: checkout ActiveRecord::Migration.create_table

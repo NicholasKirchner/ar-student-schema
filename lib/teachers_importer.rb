@@ -16,5 +16,10 @@ module TeachersImporter
         teacher = Teacher.create!(attribute_hash)
       end
     end
+
+    Student.find_each do |student|
+      student.update_attributes(:teacher_id => rand(1..9))
+    end
+
   end
 end
