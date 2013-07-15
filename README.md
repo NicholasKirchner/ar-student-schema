@@ -1,3 +1,8 @@
+What this is
+============
+
+DBC week 3 exercise to get started with activerecord and databases.
+
 ActiveRecord Student Schema
 ===========================
 
